@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>主页</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.headerback{
+			background-image:url(images/bg.gif);
+			width:1350px;
+			height:160px;
+
+		}
+		.sousuo{
+			width: 1350px;
+			height: 30px;
+			background-image: url(images/nav.jpg);
+
+		}
+		.logo{
+			position: absolute;top:30px;left: 150px;
+		}
+		a
+		{
+			text-decoration:none;
+		}
+
+		a:link
+		{
+			color: white;
+		}
+		a:visited
+		{
+			color: white;
+		}
+		a:hover
+		{
+			color: orange;
+		}
+		a:active
+		{
+			color:pink; 
+		}
+
+		#daohang{
+			position: absolute;left: 150px;
+			color: white;
+			font-size: 1px
+		}
+		#sousuo{
+			position: absolute;left:950px;
+		}
+		#content{
+
+			height: 750px;
+			width: 1050px;
+			position: absolute;left: 150px;
+		}
+		#content_top_left{
+			background-image: url(images/news_bg.png);
+			width: 315px;
+			height: 240px;
+			padding-top: 13px;
+			padding-left: 10px;
+			font-size: 3px;
+			position: absolute;left: 0px;top: 10px;
+			color:brown;
+		}
+		#content_top_left_wen{
+			padding-bottom: 20px;
+			position: absolute;top:210px;
+		}
+		#content_top_zhong{
+			position: absolute;left:330px;top: 10px;
+		}
+		#content_top_zhong_riqi{
+			color: brown;
+			font-size: 3px;
+			float: right;
+			list-style-type: none;
+			line-height: 30px;
+		}
+		#content_top_zhong_wenzi{
+			color: brown;
+			font-size: 3px;
+			float: left;
+			line-height: 30px;
+
+		}
+		.gengduo{
+			float: right;
+		}
+		#content_top_right_wen{
+			background-image: url(images/board_bg.png);
+			width: 270px;
+			height: 190px;
+			padding-top: 13px;
+			padding-left: 10px;
+			font-size: 3px;
+			color:brown;
+
+		}
+		#content_top_right{
+ 			float: right;
+ 			position: absolute;left:750px;top: 12px;
+		}
+		#content_zhong_left{
+			position: absolute;left: 0px;top: 280px;
+		}
+		#content_zhong_left_wen{
+			color: brown;
+			font-size: 3px;
+			float: left;
+			line-height: 25px;
+			position: absolute;left:1px;
+		}
+		#content_zhong_left_riqi{
+			color: brown;
+			font-size: 3px;
+			float: right;
+			line-height: 25px;
+			list-style-type: none;
+			
+		}
+		#content_zhong_zhong{
+			position: absolute;left: 380px;top: 280px;
+		}
+		#content_zhong_zhong_wen{
+			color: brown;
+			font-size: 3px;
+			float: left;
+			line-height: 25px;
+			position: absolute;left:1px;
+		}
+		#content_zhong_zhong_riqi{
+			color: brown;
+			font-size: 3px;
+			float: right;
+			line-height: 25px;
+			list-style-type: none;
+			
+		}
+		#content_zhong_right{
+			float: right;
+ 			position: absolute;left:760px;top: 300px;
+			width: 280px;
+			height: 380px;
+
+		}
+		#content_zhong_right_mingjia{
+		     position: ;left: 780px;top: 280px;
+		}
+		#content_zhong_right_wen{
+			background-image: url(images/show_bg.png);
+			color: brown;
+			font-size: 3px;
+			float: right;
+			line-height: 25px;
+			list-style-type: none;
+			padding-top: 10px;
+			padding-left: 25px;
+			padding-right: 10px;
+			
+		}
+		#content_bottom{
+			position: absolute;left: 30px;top: 530px;
+			background-image: url(images/fengcai.png);
+			width: 700px;
+			height: 215px;
+		}
+		#content_bottom_tupian{
+			padding-top: 50px;
+			padding-left: 40px;
+			
+
+		}
+
+		
+		.jiacu{
+  				font-weight:bold;
+  				color: red;
+  			}
+		.footer{
+				background-image:url(images/foot.gif);
+			width:1350px;
+			height:160px;
+			position: absolute;left: 0px;top:950px;
+
+			}
+		#footer_wenzi{
+			position: absolute;left: 450px;top: 0px;
+			color: brown;
+			font-size: 3px;
+			float: right;
+			line-height: 25px;
+			}
+	</style>
+</head>
+<body>
+<div id="header" >
+	<div class="headerback">
+		<img src="images/logo.png" class="logo">
+	</div>
+	<div id="daohangsousuo" class="sousuo">
+		<div id="daohang" ><a href="#">首页&nbsp;&nbsp;&nbsp;</a>|<a href="#">&nbsp;&nbsp;&nbsp;中心概况&nbsp;&nbsp;&nbsp;</a>|<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;培训动态&nbsp;&nbsp;&nbsp;</a>|<a href="#">&nbsp;&nbsp;&nbsp;学术争鸣&nbsp;&nbsp;&nbsp;</a>|<a href="#">&nbsp;&nbsp;&nbsp;书坛新闻&nbsp;&nbsp;&nbsp;</a>|<a href="#">&nbsp;&nbsp;&nbsp;名家展厅&nbsp;&nbsp;&nbsp;</a>|<a href="#">&nbsp;&nbsp;&nbsp;燕赵风采&nbsp;&nbsp;&nbsp;</a>|<a href="#">&nbsp;&nbsp;&nbsp;经典解读与示范&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">谏言互动</a>
+		</div>
+		<div id="sousuo">
+			<input type="text" name="text">
+			<input type="submit" name="搜索">
+		</div>
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div id="content">
+
+
+
+	<div id="content_top">
+
+
+
+		<div id="content_top_left">
+			<img src="images/news.jpg">	<br>
+			<div id="content_top_left_wen"><p >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“曲径通幽”书写人生传奇</p>
+			</div>
+		</div>
+
+
+
+		<div id="content_top_zhong">
+			<img src="images/change.png">
+			<img src="images/more.png" class="gengduo">
+			<div>
+				<ul id="content_top_zhong_wenzi">
+					<li>臻.妙--谢云、苏士澍在北京雍……</li>
+					<li>“守望相助.尽责圆梦”中国书法家协会创作...</li>
+					<li>中国书法出版传媒有限责任公司问共和</li>
+					<li>“中国书法之乡”命名授牌仪式在河南省陕县举行</li>
+					<li>中国文字博物馆馆藏书画精品展暨中国字</li>
+					<li>第一节兰亭学校师生书法作品展获奖入围名单</li>
+					<li>第25届中日友好自作诗书交流展</li>
+				</ul>
+				<ul id="content_top_zhong_riqi">
+					<li>[04-25]</li>
+					<li>[04-25]</li>
+					<li>[04-25]</li>
+					<li>[04-25]</li>
+					<li>[04-25]</li>
+					<li>[04-25]</li>
+					<li>[04-25]</li>
+				</ul>
+		    </div>
+		</div>
+
+
+
+
+
+		<div id="content_top_right">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<img src="images/board.png">
+			<div id="content_top_right_wen">
+				<ul>
+					<li>臻.妙--谢云、苏士澍在北京雍……</li>
+					<li>“守望相助.尽责圆梦”中国书法家协会创作...</li>
+					<li>中国书法出版传媒有限责任公司问共和</li>
+					<li>“中国书法之乡”命名授牌仪式在河南省陕县举行</li>
+					<li>中国文字博物馆馆藏书画精品展暨中国字</li>
+					<li>第一节兰亭学校师生书法作品展获奖入围名单</li>
+					<li>第25届中日友好自作诗书交流展</li>
+				</ul>
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+
+
+	<div id="content_zhong_left">
+		<img src="images/academic.png">
+		<img src="images/more.png" class="gengduo">
+		<div>
+				<ul id="content_zhong_left_wen">
+					<li>臻.妙--谢云、苏士澍在北京雍……</li>
+					<li>“守望相助.尽责圆梦”中国书法家协会创作...</li>
+					<li>中国书法出版传媒有限责任公司问共和</li>
+					<li>“中国书法之乡”命名授牌仪式在河南省……</li>
+					<li>中国文字博物馆馆藏书画精品展暨中国字</li>
+					<li>第一节兰亭学校师生书法作品展获奖入围名单</li>
+					<li>第25届中日友好自作诗书交流展</li>
+				</ul>
+				<ul id="content_zhong_left_riqi">
+					<li>[2015-04-25]</li>
+					<li>[2015-04-25]</li>
+					<li>[2015-04-25]</li>
+					<li>[2015-04-25]</li>
+					<li>[2015-04-25]</li>
+					<li>[2015-04-25]</li>
+					<li>[2015-04-25]</li>
+				</ul>
+		</div>
+	</div>
+
+
+
+
+	<div id="content_zhong_zhong">
+		<img src="images/book_news.png">
+		<img src="images/more.png" class="gengduo">
+		<div>
+				<ul id="content_zhong_zhong_wen">
+					<li>臻.妙--谢云、苏士澍在北京雍……</li>
+					<li>“守望相助.尽责圆梦”中国书法家协会创作...</li>
+					<li>中国书法出版传媒有限责任公司问共和</li>
+					<li>“中国书法之乡”命名授牌仪式在河南省……</li>
+					<li>中国文字博物馆馆藏书画精品展暨中国字</li>
+					<li>第一节兰亭学校师生书法作品展获奖入围名单</li>
+					<li>第25届中日友好自作诗书交流展</li>
+				</ul>
+				<ul id="content_zhong_zhong_riqi">
+					<li>[2015-04-25]</li>
+					<li>[2015-04-25]</li>
+					<li>[2015-04-25]</li>
+					<li>[2015-04-25]</li>
+					<li>[2015-04-25]</li>
+					<li>[2015-04-25]</li>
+					<li>[2015-04-25]</li>
+				</ul>
+		</div>
+	</div>
+
+
+
+
+	<div id="content_zhong_right">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<img src="images/show.png" align="center">
+
+		<div id="content_zhong_right_wen">
+			<img src="images/mingjia.jpg">
+			<p><span class="jiacu">欧阳中石</span>，山东省肥城市人，著名文化学者、书法家书法教育家。早年拜在京剧大师奚啸伯的门下。现任首都师范大学教授、博士生导师、中国书法文化研究所所长。北京唐风美术馆名誉馆长。</p>
+
+			<img src="images/view.png" class="gengduo">			
+	
+		</div>
+	</div>
+
+
+
+
+
+
+	<div id="content_bottom">
+
+			<img src="images/more.png" class="gengduo">
+		<div id="content_bottom_tupian">
+			
+			<img src="images/fengcai1.jpg">
+			<img src="images/fengcai2.jpg">
+			<img src="images/fengcai3.jpg">
+			<img src="images/fengcai4.jpg">
+		</div>
+		
+	</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="footer">
+	<div id="footer_wenzi">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电子信箱&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;设为首页&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;在线调查&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;加入收藏&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;网站地图&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;关于我们</p>
+		<img src="images/line.jpg">
+		<p>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Copyright 2013-2014 Hbshufajia.com,All Rights Reserved
+		</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;冀ICP备05067795号冀公安备110402440008号</p>
+	</div>
+
+</div>
+
+
+
+
+</body>
+</html>
