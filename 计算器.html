@@ -1,0 +1,63 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>计算器</title>
+	<style type="text/css">
+		.screen{
+			text-align: right;
+		}
+	</style>
+	<script type="text/javascript">
+	 var num = 0;
+        function jsq(num) {
+            if(num=="%"){
+                document.getElementById('screenName').value=Math.round(document.getElementById('screenName').value)/100;
+            }else{
+                document.getElementById('screenName').value += document.getElementById(num).value;
+            }
+        }
+        function eva() {
+            document.getElementById("screenName").value = eval(document.getElementById("screenName").value);
+        }
+        function clear() {
+            
+            document.getElementById("screenName").value = 0;
+        }
+	</script>
+</head>
+<body>
+<table border="1px" cellpadding="10px" onclick="calculater">
+	<form>
+		<tr>
+			<td colspan="3"><input type="text" id="screenName" name="screenName" class="screen"></td>
+			<td><input type="button" value="C" id="clear"onclick="clear();"></td>
+		</tr>
+		<tr>
+			<td><input type="button" onclick="jsq(this.id)" value="1" id="1" onclick="put"></td>
+			<td><input type="button" onclick="jsq(this.id)" value="2" id="2"></td>
+			<td><input type="button" onclick="jsq(this.id)" value="3" id="3"></td>
+			<td><input type="button" onclick="jsq(this.id)" value="+" id="+"></td>
+		</tr>
+		<tr>
+			<td><input type="button" onclick="jsq(this.id)" value="4" id="4"></td>
+			<td><input type="button" onclick="jsq(this.id)" value="5" id="5"></td>
+			<td><input type="button" onclick="jsq(this.id)" value="6" id="6"></td>
+			<td><input type="button" onclick="jsq(this.id)" value="-" id="-"></td>
+		</tr>
+		<tr>
+			<td><input type="button" onclick="jsq(this.id)" value="7" id="7"></td>
+			<td><input type="button" onclick="jsq(this.id)" value="8" id="8"></td>
+			<td><input type="button" onclick="jsq(this.id)" value="9" id="9"></td>
+			<td><input type="button" onclick="jsq(this.id)" value="*" id="*"></td>
+		</tr>
+		<tr>
+			<td><input type="button" onclick="jsq(this.id)" value="0" id="0"></td>
+			<td><input type="button" onclick="jsq(this.id)" value="." id="."></td>
+			<td><input type="button" onclick="eva()" value="=" id="="></td>
+			<td><input type="button" onclick="jsq(this.id)" value="/" id="/"></td>
+		</tr>
+</body>
+</html>
