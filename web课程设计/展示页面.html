@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>评价页面</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#top{
+		width: 1360px;
+		height: 300px;
+		background-image: url(image/TIM图片20180102163314.png);
+		opacity: 0.8;
+	}
+	#top1{
+		width:300px;
+		height: 300px;
+		background-image: url(image/top1.png);
+		background-size:100% 100%;
+		border-radius:70px;
+	}
+	#word{
+		width: 1000;
+		height: 100px;
+		font-family: 华文新魏;
+		font-size: 100px;
+		float: right;
+		position: absolute;top: 100px;left: 450px;
+	}
+	#bottom{
+		width: 980px;
+		height: 1200px;
+		margin: auto;
+		background-color: #DDDDDD;
+	}
+	#daohang{
+		width: 900px;
+		height: 25px;
+		background-color: #444444;
+		margin: auto;
+
+
+	}				
+		#nav {
+			margin-top: 20px;
+			margin-left: 50px;
+			line-height: 24px; 
+			list-style-type: none; 
+			background: #DDD;
+			margin: auto;
+			position: absolute;top:300px;left:300px;
+		}					
+		#nav a:link {
+			display: block; /*改变为块级元素*/
+			width: 80px;
+			text-align: center;
+			color: #DDD; 
+			text-decoration: none;
+		}					
+		#nav a:hover {
+			color: #FFF;
+			text-decoration: underline;
+			font-weight: bold;
+			background:#999;
+			border-color: #444;
+            border-width: 3px;
+            border-style: solid;
+		}
+		#nav li {
+			float: left; 
+			width: 150px; 
+			background: #F0F0F0;
+		}					
+		#nav li ul {
+			line-height: 27px;
+			list-style-type: none;
+			text-align: left;						
+			width: 190px; 						
+			display: none;
+		}
+		#nav li ul li{
+			float: left; 
+			width: 100px;						
+		}
+		#nav li ul a:link {
+			display: block; 
+			width: 75px;
+			text-align: left;
+			padding-left: 24px;
+			color: #444;
+		}							
+		#nav li ul a:hover {
+			color: #444;
+			text-decoration: underline;
+			font-weight: normal;
+			background: white;
+		}
+		#nav li.sfhover ul {					
+			display: block;
+			position: absolute;
+		}//形成下拉菜单		
+		 #main{
+        width:1000px;
+        margin:auto;
+        }
+        #smallpic{
+        height:120px; 
+        }
+        img{
+        float:left; 
+        margin-right:10px; 
+        margin-bottom:10px;
+        }
+        #smallpic img:hover{
+            cursor:pointer; /*设定鼠标的形状为小手*/
+            border-color: orange;
+            border-width: 5px;
+            border-style: solid;
+        }
+        .pb{
+         border:3px solid #14c3fd;
+        } 	
+		.show{
+			position: absolute;top: 480px;left: 380px;
+			border-color: black;
+			border-style: solid;
+			border-width: 5px;
+		}
+
+
+
+
+
+        .img{
+			width:200px;
+			height:200px;
+
+		}
+		#slides{
+			height:200px;
+			border:1px solid #C90;
+			white-space:nowrap;
+			width:200px;
+			float: right;
+			border-style: solid;
+			border-color: black;
+			border-width: 1px;
+			position: absolute;top:1000px;left: 950px;
+		}
+
+
+
+
+
+
+
+
+		#issure{
+			position: absolute;top:1050px;left: 200px;
+		}
+		#btn{
+			width:75px;
+			height:22px;
+			background-color: #DDD;
+			position: absolute;top:150px;left: 750px;
+		}
+
+
+
+	</style>
+	<script src="jquery-3.2.1.js" type="text/javascript"></script>
+	<script type="text/javascript">
+			function subMenu() {
+				var liNodes = document.getElementsByTagName("li");
+						
+				for (var i=0; i<liNodes.length; ++i) {						
+				liNodes[i].onmouseover = function() {
+					  //鼠标经过时设置类名
+						this.className = "sfhover";
+					} //onmouseover()							
+				liNodes[i].onmouseout = function() {
+						//鼠标移开时取消类名
+						this.className = "";
+					} //onmouseout					
+				}	//for		
+			} //subMenu()
+
+			window.onload = subMenu;
+
+
+
+
+
+
+			function showPic(i){	
+			var oImg = document.images[5];
+			var link = document.links[i+17];
+			console.log(link);
+			oImg.src = link.href;
+		}
+
+
+
+
+
+	
+	</script>
+	<script type="text/javascript">
+    $(function(){
+        $("#btn").click(function(){
+            $("#issure1").html($("#txt").val());
+        })
+    })
+	</script>
+
+</head>
+<body>
+<div>
+	<div id="top">
+		<div id="top1"></div>
+		<div id="word">最美师大摄影大赛</div>
+	</div>
+	<div id="bottom">
+		<div id="daohang">
+			 	<ul id="nav">
+			<li><a href="#">首页</a>
+				<ul>
+					<li><a href="#">比赛介绍</a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#">工作历程</a></li>
+				</ul>
+			</li>
+
+			<li><a href="#">历届作品</a>
+				<ul>
+					<li><a href="#">第一届</a></li>
+					<li><a href="#">第二届</a></li>
+					<li><a href="#">第三届</a></li>
+				</ul>
+			</li>
+			<li><a href="#">大赛报名</a>
+				<ul>
+					<li><a href="#">个人报名</a></li>
+					<li><a href="#">团体报名</a></li>
+					<li><a href="#">报名情况概览</a></li>
+				</ul>
+			</li>
+			<li><a href="#">打分系统</a>
+				<ul>
+					<li><a href="#">个人赛打分</a></li>
+					<li><a href="#">团体赛打分</a></li>
+					<li><a href="评价页面.html">作品展示</a></li>
+				
+				</ul>
+			</li>
+			<li><a href="实名认证页面.html"class="">实名认证</a></li>
+				</ul>
+
+			</div>
+	<br>
+
+	<div id="pic">
+		<div id="main">
+        <div id="smallpic">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="image/s2.jpg"onmousemove="showPic(0);return false;"><img src="image/s2.jpg" width="180" height="100" /></a>
+            <a href="image/s3.jpg"onmousemove="showPic(1);return false;"><img src="image/s3.jpg" width="180" height="100" /></a>
+            <a href="image/s4.jpg"onmousemove="showPic(2);return false;"><img src="image/s4.jpg" width="180" height="100" /></a>
+            <a href="image/s5.jpg"onmousemove="showPic(3);return false;"><img src="image/s5.jpg" width="180" height="100" /></a>
+            <a href="image/s6.jpg"onmousemove="showPic(4);return false;"><img src="image/s6.jpg" width="180" height="100" /></a>
+        </div>
+        <div >
+            <img id="bigpic" src="image/s1.jpg" width="600px" class="show" />
+        </div>
+    </div>
+
+
+
+
+
+
+
+ 
+
+
+
+
+	<div id="issure">
+		<div id="my">
+			<a href="#">登录</a>|<a href="实名认证页面.html">注册</a>
+			<form>
+				<textarea cols="125" rows="8" value="" id='txt'></textarea>
+				<br/>
+				<input id="btn" type="button" value="click">
+			</form>
+		</div>
+		<br>
+		<br>
+		<div id="other">
+			<img src="image/issure.png">
+			<br>
+			<div id="issure1" class="bac">
+				<br>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

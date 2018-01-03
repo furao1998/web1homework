@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>评分界面</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#top{
+		width: 1360px;
+		height: 300px;
+		background-image: url(image/TIM图片20180102163314.png);
+		opacity: 0.8;
+	}
+	#top1{
+		width:300px;
+		height: 300px;
+		background-image: url(image/top1.png);
+		background-size:100% 100%;
+		border-radius:70px;
+	}
+	#word{
+		width: 1000;
+		height: 100px;
+		font-family: 华文新魏;
+		font-size: 100px;
+		float: right;
+		position: absolute;top: 100px;left: 450px;
+	}
+	#bottom{
+		width: 1330px;
+		height: 25px;
+		margin: auto;
+		background-color: #DDDDDD;
+	}
+	#daohang{
+		width: 900px;
+		height: 25px;
+		background-color: #444444;
+		margin: auto;
+
+
+	}				
+		#nav {
+			margin-top: 20px;
+			margin-left: 50px;
+			line-height: 24px; 
+			list-style-type: none; 
+			background: #DDD;
+			margin: auto;
+			position: absolute;top:300px;left:300px;
+		}					
+		#nav a:link {
+			display: block; /*改变为块级元素*/
+			width: 80px;
+			text-align: center;
+			color: #DDD; 
+			text-decoration: none;
+		}					
+		#nav a:hover {
+			color: #FFF;
+			text-decoration: underline;
+			font-weight: bold;
+			background:#999;
+			border-color: #444;
+            border-width: 3px;
+            border-style: solid;
+		}
+		#nav li {
+			float: left; 
+			width: 150px; 
+			background: #F0F0F0;
+		}					
+		#nav li ul {
+			line-height: 27px;
+			list-style-type: none;
+			text-align: left;						
+			width: 190px; 						
+			display: none;
+		}
+		#nav li ul li{
+			float: left; 
+			width: 100px;						
+		}
+		#nav li ul a:link {
+			display: block; 
+			width: 75px;
+			text-align: left;
+			padding-left: 24px;
+			color: #444;
+		}							
+		#nav li ul a:hover {
+			color: #444;
+			text-decoration: underline;
+			font-weight: normal;
+			background: white;
+		}
+		#nav li.sfhover ul {					
+			display: block;
+			position: absolute;
+		}//形成下拉菜单		
+		 #main{
+        width:1000px;
+        margin:auto;
+        }
+        #smallpic{
+        height:120px; 
+        }
+        img{
+        float:left; 
+        margin-right:10px; 
+        margin-bottom:10px;
+        }
+        #smallpic img:hover{
+            cursor:pointer; /*设定鼠标的形状为小手*/
+            border-color: orange;
+            border-width: 5px;
+            border-style: solid;
+        }
+        .pb{
+         border:3px solid #14c3fd;
+        } 	
+
+
+
+
+
+
+        #pic{
+        	width: 350px;
+        	height:400px;
+        	background-image: url(image/pic.png);
+			background-size:100% 100%;
+			position: absolute;top: 340px;left: 300px;
+        }
+        #zhuce{
+        	
+        	width: 700px;
+        	height:400px;
+        	float: right;
+        	position: absolute;top: 380px;left: 700px;
+        }
+        .size{
+        	width: 300px;
+        	height: 30px;
+        }
+
+	</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+			function subMenu() {
+				var liNodes = document.getElementsByTagName("li");
+						
+				for (var i=0; i<liNodes.length; ++i) {						
+				liNodes[i].onmouseover = function() {
+					  //鼠标经过时设置类名
+						this.className = "sfhover";
+					} //onmouseover()							
+				liNodes[i].onmouseout = function() {
+						//鼠标移开时取消类名
+						this.className = "";
+					} //onmouseout					
+				}	//for		
+			} //subMenu()
+
+			window.onload = subMenu;
+
+
+			function beforeSubmit(form){
+			
+			if(form.name.value==""){   
+        	alert("用户名不能为空!");     
+        	form.username.focus();      
+       		return false;   
+    	}   
+    		if(form.password.value==""){   
+        	alert("密码不能为空!");  
+        	form.password.focus();        
+        	return false;   
+    	}
+    		if(form.password1.value==""){   
+        	alert("密码不能为空!"); 
+        	form.password1.focus();         
+        	return false;   
+   		}  
+			if(form.password.value!=form.password1.value) {
+			alert('你两次输入的密码不一致，请重新输入！');
+			form.password1.focus();
+			return false;
+		}
+   		 return true;
+
+		}
+
+
+
+
+	</script>
+</head>
+<body>
+<div id="top">
+		<div id="top1"></div>
+		<div id="word">最美师大摄影大赛</div>
+	</div>
+	<div id="bottom">
+		<div id="daohang">
+			 	<ul id="nav">
+			<li><a href="#">首页</a>
+				<ul>
+					<li><a href="#">比赛介绍</a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#">工作历程</a></li>
+				</ul>
+			</li>
+
+			<li><a href="#">历届作品</a>
+				<ul>
+					<li><a href="#">第一届</a></li>
+					<li><a href="#">第二届</a></li>
+					<li><a href="#">第三届</a></li>
+				</ul>
+			</li>
+			<li><a href="#">大赛报名</a>
+				<ul>
+					<li><a href="#">个人报名</a></li>
+					<li><a href="#">团体报名</a></li>
+					<li><a href="#">报名情况概览</a></li>
+				</ul>
+			</li>
+			<li><a href="#">打分系统</a>
+				<ul>
+					<li><a href="#">个人赛打分</a></li>
+					<li><a href="#">团体赛打分</a></li>
+					<li><a href="评价页面.html">作品展示</a></li>
+				
+				</ul>
+			</li>
+			<li><a href="实名认证页面.html"class="">实名认证</a></li>
+				</ul>
+
+			</div>
+			<br>
+
+
+
+
+
+
+			<div id="pic"></div>
+
+
+
+
+
+
+
+			<div id="zhuce">
+				<form  method="post"  name="form" onSubmit="return beforeSubmit(this);" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="text" name="name" class="size" value="姓名"><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="text" name="name" class="size" value="手机号码"><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="text" naem="password" class="size" value="邮箱"><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="text" name="password1" class="size" value="身份证号码"><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="submit" value="注册">
+
+				</form>
+			</div>
+
+</div>
+</body>
+</html>
